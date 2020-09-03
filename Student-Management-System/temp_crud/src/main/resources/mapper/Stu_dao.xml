@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mj.temp_crud.dao.Stu_dao">
+    <insert id="save" parameterType="Student">
+        insert into temp_crud values
+        (#{Stu_id},#{S_year},#{S_name},#{S_sex},#{Specialty})
+    </insert>
+    <delete id="del" parameterType="java.lang.String">
+        delete from temp_crud where Stu_id = #{S_id}
+    </delete>
+    <update id="update" parameterType="Student">
+        UPDATE temp_crud SET
+        S_year = #{S_year}, S_name = #{S_name}, S_sex = #{S_sex}, Specialty = #{Specialty}
+        WHERE Stu_id = #{Stu_id}
+    </update>
+    <select id="studs" resultType="Student">
+        select * from temp_crud
+    </select>
+</mapper>

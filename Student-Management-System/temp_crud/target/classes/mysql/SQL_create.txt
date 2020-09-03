@@ -1,0 +1,3 @@
+CREATE TABLE `dbfirst`.`temp_crud`
+( `Stu_id` CHAR(3) NOT NULL, `S_year` YEAR(4) NOT NULL, `S_name` VARCHAR(20) NOT NULL, `S_sex` VARCHAR(20) NOT NULL, `Specialty` VARCHAR(20) NOT NULL, PRIMARY KEY (`Stu_id`) )
+ENGINE=INNODB CHARSET=utf8 COLLATE=utf8_general_ci;
